@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+
+/* reset */
+body,
+section,
+form,
+div,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+/* sign up */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: skyblue;
+}
+
+#form {
+  width: 50%;
+  padding: 32px 180px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+#form h1 {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 14px;
+  font-size: 36px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+#wrapper {
+  width: 70%;
+}
+
+#wrapper label {
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+#wrapper input {
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
+  padding: 6px 6px;
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 6px;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+#wrapper .message {
+  font-size: 14px;
+}
+
+#wrapper .message.pass {
+  color: #00951e;
+}
+
+#wrapper .message.fail {
+  color: #ed3131;
+}
+
+#wrapper button {
+  display: block;
+  font-family: 'Noto Sans KR', sans-serif;
+  width: 80%;
+  padding: 8px 0;
+  margin: 0 auto;
+  margin-top: 36px;
+  margin-bottom: 40px;
+  color: white;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #2e2d2d;
+  cursor: pointer;
+}
+
+#wrapper button:disabled {
+  cursor: auto;
+  background-color: #807f7f;
+}
+
+/* modal */
+#modal-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 28px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+#modal h2 {
+  margin-top: 0;
+}
+
+#close-wrapper {
+  width: 100%;
+  text-align: right;
+  margin-top: 16px;
+}
+
+#close-wrapper button {
+  padding: 2px 8px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#close-wrapper button:hover {
+  color: white;
+  border: 1px solid #2e2d2d;
+  background-color: #2e2d2d;
+}

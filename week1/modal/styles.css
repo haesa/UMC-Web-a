@@ -1,0 +1,28 @@
+#modal-wrapper {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.671);
+}
+
+#modal {
+  width: 350px;
+  padding: 28px 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+#title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#close-wrapper {
+  display: flex;
+  justify-content: end;
+}
