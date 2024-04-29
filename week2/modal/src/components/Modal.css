@@ -1,0 +1,33 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.656);
+}
+
+.modal-box {
+  padding: 20px;
+  width: 20rem;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-content {
+  margin-bottom: 20px;
+}
+
+.close {
+  display: flex;
+  justify-content: end;
+}
