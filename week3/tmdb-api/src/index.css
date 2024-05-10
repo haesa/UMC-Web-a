@@ -1,0 +1,10 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(35, 35, 78);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
