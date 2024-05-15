@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import Movie from '../components/Movie';
 import Movies from '../components/Movies';
+import { StyledLink } from '../globalStyled/globalStyled';
 
 const options = {
   method: 'GET',
@@ -12,14 +13,14 @@ const options = {
   },
 };
 
-export default function PopularPage() {
+export default function TopRatedPage() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState();
 
   useEffect(() => {
     setLoading(true);
     fetch(
-      'https://api.themoviedb.org/3/movie/popular?language=ko&page=1',
+      'https://api.themoviedb.org/3/movie/top_rated?language=ko&page=1',
       options
     )
       .then((response) => response.json())
@@ -33,7 +34,13 @@ export default function PopularPage() {
   return (
     <Movies>
       {movies.map((movie) => (
-        <Movie key={movie.id} movie={movie} />
+        <StyledLink
+          key={movie.id}
+          to={`/movie-detail/${movie.original_title}`}
+          state={movie}
+        >
+          <Movie movie={movie} />
+        </StyledLink>
       ))}
     </Movies>
   );

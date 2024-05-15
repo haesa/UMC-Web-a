@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../components/Loading';
 import Movie from '../components/Movie';
 import Movies from '../components/Movies';
+import { StyledLink } from '../globalStyled/globalStyled';
 
 const options = {
   method: 'GET',
@@ -33,7 +34,13 @@ export default function PopularPage() {
   return (
     <Movies>
       {movies.map((movie) => (
-        <Movie key={movie.id} movie={movie} />
+        <StyledLink
+          key={movie.id}
+          to={`/movie-detail/${movie.original_title}`}
+          state={movie}
+        >
+          <Movie movie={movie} />
+        </StyledLink>
       ))}
     </Movies>
   );
