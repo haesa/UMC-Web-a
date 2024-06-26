@@ -16,7 +16,7 @@ function checkAge(age) {
 }
 
 function checkUsername(username) {
-  return /^[A-Za-z0-1]+$/.test(username) && username.length >= 5;
+  return /^[A-Za-z0-9]+$/.test(username) && username.length >= 5;
 }
 
 function checkPassword(password) {

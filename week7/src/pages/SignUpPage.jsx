@@ -111,7 +111,7 @@ export default function SignUpPage() {
       .post('http://localhost:8080/auth/signup', formData, {
         headers: { 'Context-Type': 'application/json; charset=utf-8' },
       })
-      .then((res) => {
+      .then(() => {
         alert('회원가입이 정상적으로 처리되었습니다!');
         navigate('/login');
       })
